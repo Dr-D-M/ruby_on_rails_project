@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Articles</title>
+</head>
+<body>
+<h1>All Articles</h1>
+<ul id="articles">
+	<% @article.each do |article| %>
+	<li>
+		<%= link_to article.title, article_path(article) %>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+</body>
+</html>
