@@ -1,0 +1,16 @@
+<div class="authors_view">
+
+<p>
+  <strong>Username:</strong>
+  <%= @author.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @author.email %>
+</p>
+<% if @author.email = current_user.email || current_user.email == 'whatever@gmail.com' %>
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<% end %>
+<%= link_to 'Back', authors_path %>
+</div>
